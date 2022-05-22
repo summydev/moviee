@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 =======
 # This workflow uses actions that are not certified by GitHub.
@@ -7,7 +7,7 @@
 # documentation.
 
 name: Dart
->>>>>>> bba778d607d89f849705d9fb388cbd233aa436d0
+
 
 on:
   pull_request:
@@ -33,7 +33,7 @@ jobs:
   build: 
     name: Build & Release
     runs-on: 	windows-latest
->>>>>>> bba778d607d89f849705d9fb388cbd233aa436d0
+
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-java@v1
@@ -58,4 +58,3 @@ jobs:
           tag: v1.0.${{ github.run_number}}
           token: ${{ secrets.TOKEN}}
       
->>>>>>> bba778d607d89f849705d9fb388cbd233aa436d0
