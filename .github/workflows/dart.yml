@@ -17,7 +17,7 @@ on:
     - master
     - develop
 
-name: "Build & Release"
+#name: "Build & Release"
 jobs:
   build: 
     name: Build & Release
