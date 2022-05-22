@@ -1,34 +1,14 @@
 
-
-=======
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
 name: Dart
-
 
 on:
   pull_request:
     branches:
-<<<<<<< HEAD
       - master
 jobs:
   flutter_test:
     name: Run Flutter test and analyze
     runs-on: windows-latest
-=======
-      - main
-      - master
-
-  push:
-    branches:
-    - main
-    - master
-    - develop
-
-#name: "Build & Release"
 jobs:
   build: 
     name: Build & Release
@@ -40,17 +20,11 @@ jobs:
         with: 
           java-version: '12.x'
       - uses: subosito/flutter-action@v1
-<<<<<<< HEAD
          with:
           channel: "stable"
       - run: flutter pub get
       - run: flutter analyze
       - run: flutter test
-=======
-        with:
-          flutter-version: '2.10.5'
-      - run: flutter pub get
-      - run: flutter build apk --debug --split-per-abi
       - name: push to releases
         uses: ncipollo/release-action@v1
         with:
