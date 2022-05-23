@@ -1,9 +1,7 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'home_page.dart';
-import 'network.dart';
-import 'movie_details.dart';
+
 import 'package:url_launcher/url_launcher.dart';
 
 class MovieScreen extends StatefulWidget {
@@ -17,13 +15,7 @@ class MovieScreen extends StatefulWidget {
 }
 
 class _MovieScreenState extends State<MovieScreen> {
-  late dynamic poster_path;
-  late dynamic backdrop;
-  late dynamic overview;
-  late String release_date;
-  late dynamic title;
-  late dynamic popularity;
-  late dynamic vote_average;
+  late dynamic movieDataInfo;
   late int poster_pathL;
 
   late int index;
@@ -38,20 +30,7 @@ class _MovieScreenState extends State<MovieScreen> {
   updateUI(dynamic movieData) {
     late String results;
 
-    poster_pathL = movieData['results'][0]['poster_path'].length;
-    poster_path = movieData['results']; //[index = 6]['poster_path'];
-
-    overview = movieData['results'];
-    release_date = movieData['results'][0]['release_date'];
-    title = movieData['results'];
-    backdrop = movieData['results'];
-    popularity = movieData['results'];
-    vote_average = movieData['results'];
-    // print('https://image.tmdb.org/t/p/w500' + '$poster_path');
-    // print(release_date);
-    // print(title);
-    // print(overview);
-    // print(poster_pathL);
+    movieDataInfo = movieData['results'];
   }
 
   @override
@@ -78,7 +57,7 @@ class _MovieScreenState extends State<MovieScreen> {
               separatorBuilder: (context, _) => SizedBox(
                 width: 22,
               ),
-              itemCount: poster_path.length,
+              itemCount: movieDataInfo.length,
               itemBuilder: (BuildContext context, int index) {
                 index == index;
                 return Card(
@@ -93,7 +72,7 @@ class _MovieScreenState extends State<MovieScreen> {
                           height: 350,
                           child: Image.network(
                             'https://image.tmdb.org/t/p/w500' +
-                                poster_path[index]['poster_path'],
+                                movieDataInfo[index]['poster_path'],
                           ),
                         ),
                         Padding(
@@ -106,7 +85,7 @@ class _MovieScreenState extends State<MovieScreen> {
                                 height: 5,
                               ),
                               Text(
-                                title[index]['title'],
+                                movieDataInfo[index]['title'],
                                 style: TextStyle(
                                     fontSize: 16.0,
                                     fontWeight: FontWeight.w700,
@@ -118,7 +97,7 @@ class _MovieScreenState extends State<MovieScreen> {
                               Container(
                                 height: 30.0,
                                 child: Text(
-                                  overview[index]['overview'],
+                                  movieDataInfo[index]['overview'],
                                   style: TextStyle(
                                       fontSize: 10.0, color: Colors.white),
                                 ),
@@ -164,7 +143,7 @@ class _MovieScreenState extends State<MovieScreen> {
                                                             child:
                                                                 Image.network(
                                                               'https://image.tmdb.org/t/p/w500' +
-                                                                  poster_path[
+                                                                  movieDataInfo[
                                                                           index]
                                                                       [
                                                                       'backdrop_path'],
@@ -180,7 +159,7 @@ class _MovieScreenState extends State<MovieScreen> {
                                                                 children: <
                                                                     Widget>[
                                                                   Text(
-                                                                      popularity[index]
+                                                                      movieDataInfo[index]
                                                                               [
                                                                               'popularity']
                                                                           .toString(),
@@ -213,7 +192,7 @@ class _MovieScreenState extends State<MovieScreen> {
                                                                     size: 20,
                                                                   ),
                                                                   Text(
-                                                                    vote_average[index]
+                                                                    movieDataInfo[index]
                                                                             [
                                                                             'vote_average']
                                                                         .toString(),
@@ -227,7 +206,7 @@ class _MovieScreenState extends State<MovieScreen> {
                                                                 children: <
                                                                     Widget>[
                                                                   Text(
-                                                                    vote_average[index]
+                                                                    movieDataInfo[index]
                                                                             [
                                                                             'vote_count']
                                                                         .toString(),
@@ -278,7 +257,8 @@ class _MovieScreenState extends State<MovieScreen> {
                                                                         .white),
                                                               ),
                                                               Text(
-                                                                overview[index][
+                                                                movieDataInfo[
+                                                                        index][
                                                                     'overview'],
                                                                 style: TextStyle(
                                                                     fontSize:
@@ -294,7 +274,7 @@ class _MovieScreenState extends State<MovieScreen> {
                                                               onPressed:
                                                                   () async {
                                                                 final url = 'https://www.themoviedb.org/movie/' +
-                                                                    popularity[index]
+                                                                    movieDataInfo[index]
                                                                             [
                                                                             'id']
                                                                         .toString();
@@ -337,7 +317,7 @@ class _MovieScreenState extends State<MovieScreen> {
                                     size: 12,
                                   ),
                                   Text(
-                                    vote_average[index]['vote_average']
+                                    movieDataInfo[index]['vote_average']
                                         .toString(),
                                     style: TextStyle(
                                         fontSize: 12.0, color: Colors.white),
