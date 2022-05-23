@@ -6,5 +6,5 @@ View the live link https://summydev.github.io/moviee/#/
 clone the project in your terminal: <br>
 git clone https://github.com/summydev/moviee.git   <br>
 
-Run <b>Flutter Pub get<b>
+Run <b>Flutter Pub get </b> and<br>
 You are good to go!!!
