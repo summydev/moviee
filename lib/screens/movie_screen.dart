@@ -140,7 +140,7 @@ class _MovieScreenState extends State<MovieScreen> {
                                                       children: <Widget>[
                                                         Center(
                                                           child: Container(
-                                                            height: 200,
+                                                            height: 300,
                                                             child:
                                                                 Image.network(
                                                               'https://image.tmdb.org/t/p/w500' +
@@ -257,20 +257,21 @@ class _MovieScreenState extends State<MovieScreen> {
                                                                 'DESCRIPTION',
                                                                 style: TextStyle(
                                                                     fontSize:
-                                                                        15.0,
+                                                                        18.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .bold,
                                                                     color: Colors
                                                                         .white),
                                                               ),
+                                                              SizedBox( height: 10.0),
                                                               Text(
                                                                 movieDataInfo[
                                                                         index][
                                                                     'overview'],
                                                                 style: TextStyle(
                                                                     fontSize:
-                                                                        10.0,
+                                                                        15.0,
                                                                     color: Colors
                                                                         .white),
                                                               ),
