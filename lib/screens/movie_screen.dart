@@ -140,7 +140,7 @@ class _MovieScreenState extends State<MovieScreen> {
                                                       children: <Widget>[
                                                         Center(
                                                           child: Container(
-                                                            height: 300,
+                                                            height: 250,
                                                             child:
                                                                 Image.network(
                                                               'https://image.tmdb.org/t/p/w500' +
@@ -150,6 +150,9 @@ class _MovieScreenState extends State<MovieScreen> {
                                                                       'backdrop_path'],
                                                             ),
                                                           ),
+                                                        ),
+                                                        Divider(
+                                                        color: Colors.yellow,
                                                         ),
                                                         Row(
                                                             mainAxisAlignment:
