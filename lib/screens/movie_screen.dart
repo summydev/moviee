@@ -262,7 +262,7 @@ class _MovieScreenState extends State<MovieScreen> {
                                                                     'overview'],
                                                                 style: TextStyle(
                                                                     fontSize:
-                                                                        13.5,
+                                                                        10.5,
                                                                     color: Colors
                                                                         .white),
                                                               ),
