@@ -110,6 +110,7 @@ class _MovieScreenState extends State<MovieScreen> {
                                   GestureDetector(
                                     onTap: () {
                                       showModalBottomSheet(
+                                         isScrollControlled: true,
                                           context: context,
                                           builder: (context) => Container(
                                                 color: Color(0xff01050d),
