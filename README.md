@@ -1,4 +1,4 @@
-#MOVIEE
+## MOVIEE
 An app that shows you a list of top trendy movies. I created this app with flutter using (TMDB Api)
 View the live link https://summydev.github.io/moviee/#/
 
