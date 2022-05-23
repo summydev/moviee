@@ -3,9 +3,9 @@
     "short_name": "MOVIEE",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "Get list of trendy top trendy movies.",
+    "background_color": "#070746",
+    "theme_color": "#070746",
+    "description": "Get list oftop trendy movies.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
