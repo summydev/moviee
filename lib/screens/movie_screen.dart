@@ -1,7 +1,5 @@
-// ignore_for_file: deprecated_member_use
-
 import 'package:flutter/material.dart';
-
+import 'package:movie_app_api/utilities/constants.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MovieScreen extends StatefulWidget {
@@ -43,7 +41,7 @@ class _MovieScreenState extends State<MovieScreen> {
         elevation: 0,
         title: Text(
           'Moviee',
-          style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.w600),
+          style: kAppBarTextStyle,
         ),
         automaticallyImplyLeading: false,
       ),
@@ -86,10 +84,7 @@ class _MovieScreenState extends State<MovieScreen> {
                               ),
                               Text(
                                 movieDataInfo[index]['title'],
-                                style: TextStyle(
-                                    fontSize: 16.0,
-                                    fontWeight: FontWeight.w700,
-                                    color: Colors.white),
+                                style: kTitleTextStyle,
                               ),
                               SizedBox(
                                 height: 10,
@@ -98,8 +93,7 @@ class _MovieScreenState extends State<MovieScreen> {
                                 height: 30.0,
                                 child: Text(
                                   movieDataInfo[index]['overview'],
-                                  style: TextStyle(
-                                      fontSize: 10.0, color: Colors.white),
+                                  style: koverviewTextStyle,
                                 ),
                               ),
                               SizedBox(
@@ -110,22 +104,13 @@ class _MovieScreenState extends State<MovieScreen> {
                                   GestureDetector(
                                     onTap: () {
                                       showModalBottomSheet(
-                                         isScrollControlled: true,
+                                          isScrollControlled: true,
                                           context: context,
                                           builder: (context) => Container(
                                                 color: Color(0xff01050d),
                                                 child: Container(
-                                                  decoration: BoxDecoration(
-                                                    color: Color.fromARGB(
-                                                        255, 2, 24, 39),
-                                                    borderRadius:
-                                                        BorderRadius.only(
-                                                      topLeft:
-                                                          Radius.circular(30.0),
-                                                      topRight:
-                                                          Radius.circular(30.0),
-                                                    ),
-                                                  ),
+                                                  decoration:
+                                                      kshowModalSheetStyle,
                                                   child: Padding(
                                                     padding:
                                                         const EdgeInsets.only(
@@ -152,7 +137,7 @@ class _MovieScreenState extends State<MovieScreen> {
                                                           ),
                                                         ),
                                                         Divider(
-                                                        color: Colors.yellow,
+                                                          color: Colors.yellow,
                                                         ),
                                                         Row(
                                                             mainAxisAlignment:
@@ -168,24 +153,11 @@ class _MovieScreenState extends State<MovieScreen> {
                                                                               'popularity']
                                                                           .toString(),
                                                                       style:
-                                                                          TextStyle(
-                                                                        color: Colors
-                                                                            .yellowAccent,
-                                                                        fontSize:
-                                                                            14.0,
-                                                                        fontWeight:
-                                                                            FontWeight.bold,
-                                                                      )),
+                                                                          kPopularityValue),
                                                                   Text(
-                                                                    'Popularity',
-                                                                    style:
-                                                                        TextStyle(
-                                                                      color: Colors
-                                                                          .white,
-                                                                          fontSize:
-                                                                            12.0,
-                                                                    ),
-                                                                  ),
+                                                                      'Popularity',
+                                                                      style:
+                                                                          kPopularityTextStyle),
                                                                 ],
                                                               ),
                                                               Column(
@@ -202,11 +174,8 @@ class _MovieScreenState extends State<MovieScreen> {
                                                                             [
                                                                             'vote_average']
                                                                         .toString(),
-                                                                    style: TextStyle(
-                                                                      fontSize:
-                                                                            12.0,
-                                                                        color: Colors
-                                                                            .white),
+                                                                    style:
+                                                                        kPopularityTextStyle,
                                                                   ),
                                                                 ],
                                                               ),
@@ -214,32 +183,16 @@ class _MovieScreenState extends State<MovieScreen> {
                                                                 children: <
                                                                     Widget>[
                                                                   Text(
-                                                                    movieDataInfo[index]
-                                                                            [
-                                                                            'vote_count']
-                                                                        .toString(),
-                                                                    style:
-                                                                        TextStyle(
-                                                                      color: Colors
-                                                                          .yellowAccent,
-                                                                      fontSize:
-                                                                          14.0,
-                                                                        
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .bold,
-                                                                    ),
-                                                                  ),
+                                                                      movieDataInfo[index]
+                                                                              [
+                                                                              'vote_count']
+                                                                          .toString(),
+                                                                      style:
+                                                                          kPopularityValue),
                                                                   Text(
-                                                                    'Vote Count',
-                                                                    style:
-                                                                        TextStyle(
-                                                                          fontSize:
-                                                                            12.0,
-                                                                      color: Colors
-                                                                          .white,
-                                                                    ),
-                                                                  ),
+                                                                      'Vote Count',
+                                                                      style:
+                                                                          kPopularityTextStyle),
                                                                 ],
                                                               ),
                                                             ]),
@@ -267,7 +220,8 @@ class _MovieScreenState extends State<MovieScreen> {
                                                                     color: Colors
                                                                         .white),
                                                               ),
-                                                              SizedBox( height: 10.0),
+                                                              SizedBox(
+                                                                  height: 10.0),
                                                               Text(
                                                                 movieDataInfo[
                                                                         index][
@@ -329,11 +283,9 @@ class _MovieScreenState extends State<MovieScreen> {
                                     size: 12,
                                   ),
                                   Text(
-                                    movieDataInfo[index]['vote_average']
-                                        .toString(),
-                                    style: TextStyle(
-                                        fontSize: 12.0, color: Colors.white),
-                                  ),
+                                      movieDataInfo[index]['vote_average']
+                                          .toString(),
+                                      style: kPopularityTextStyle),
                                 ],
                               ),
                             ],
