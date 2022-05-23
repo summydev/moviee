@@ -168,7 +168,7 @@ class _MovieScreenState extends State<MovieScreen> {
                                                                         color: Colors
                                                                             .yellowAccent,
                                                                         fontSize:
-                                                                            16.0,
+                                                                            14.0,
                                                                         fontWeight:
                                                                             FontWeight.bold,
                                                                       )),
@@ -178,6 +178,8 @@ class _MovieScreenState extends State<MovieScreen> {
                                                                         TextStyle(
                                                                       color: Colors
                                                                           .white,
+                                                                          fontSize:
+                                                                            12.0,
                                                                     ),
                                                                   ),
                                                                 ],
@@ -197,6 +199,8 @@ class _MovieScreenState extends State<MovieScreen> {
                                                                             'vote_average']
                                                                         .toString(),
                                                                     style: TextStyle(
+                                                                      fontSize:
+                                                                            12.0,
                                                                         color: Colors
                                                                             .white),
                                                                   ),
@@ -215,7 +219,8 @@ class _MovieScreenState extends State<MovieScreen> {
                                                                       color: Colors
                                                                           .yellowAccent,
                                                                       fontSize:
-                                                                          16.0,
+                                                                          14.0,
+                                                                        
                                                                       fontWeight:
                                                                           FontWeight
                                                                               .bold,
@@ -225,6 +230,8 @@ class _MovieScreenState extends State<MovieScreen> {
                                                                     'Vote Count',
                                                                     style:
                                                                         TextStyle(
+                                                                          fontSize:
+                                                                            12.0,
                                                                       color: Colors
                                                                           .white,
                                                                     ),
@@ -249,7 +256,7 @@ class _MovieScreenState extends State<MovieScreen> {
                                                                 'DESCRIPTION',
                                                                 style: TextStyle(
                                                                     fontSize:
-                                                                        16.0,
+                                                                        15.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .bold,
@@ -262,7 +269,7 @@ class _MovieScreenState extends State<MovieScreen> {
                                                                     'overview'],
                                                                 style: TextStyle(
                                                                     fontSize:
-                                                                        10.5,
+                                                                        10.0,
                                                                     color: Colors
                                                                         .white),
                                                               ),
